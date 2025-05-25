@@ -1,0 +1,11 @@
+FROM nodejs:16 as alpine 
+
+WORKDIR /app
+
+COPY . .
+
+EXPOSE 8080
+
+RUN npm install
+
+CMD ["nodejs" , "index.js"].
